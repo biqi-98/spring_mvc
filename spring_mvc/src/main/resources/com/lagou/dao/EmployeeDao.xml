@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lagou.dao.EmployeeDao">
+
+    <!--查询所有-->
+    <select id="findAll" resultType="com.lagou.domain.Employee">
+        select * from tb_employee
+    </select>
+
+    <insert id="save" parameterType="com.lagou.domain.Employee">
+        insert into tb_employee(emp_name,dept_id,job_name,join_date,telephone)
+        values(#{emp_name},#{dept_id},#{job_name},#{join_date},#{telephone})
+    </insert>
+
+</mapper>

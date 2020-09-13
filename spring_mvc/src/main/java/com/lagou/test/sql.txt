@@ -1,0 +1,27 @@
+题目1：
+CREATE TABLE tb_dept (
+  dept_id INT(11)  PRIMARY KEY AUTO_INCREMENT,	
+  dept_name VARCHAR(100) ,
+  major_name VARCHAR(100) ,
+  telephone VARCHAR(20) ,
+  email VARCHAR(100) 
+) ENGINE=INNODB DEFAULT CHARSET=utf8; 
+
+CREATE TABLE tb_employee (
+  emp_id INT(11)  PRIMARY KEY AUTO_INCREMENT,	
+  emp_name VARCHAR(100) ,
+  dept_id INT(11),	
+  job_name VARCHAR(100) ,
+  join_date DATE,
+  telephone VARCHAR(20)
+  
+) ENGINE=INNODB DEFAULT CHARSET=utf8; 
+
+
+题目2：
+INSERT INTO tb_dept VALUES ('1', '市场部', '拉勾教育', '400-400-4008','lagou@163.com');
+INSERT INTO tb_dept VALUES ('2', '销售部', '拉勾教育', '400-400-4002','laggou@163.com');
+
+INSERT INTO tb_employee VALUES ('1', '小王', '1', '客户经理','2020-06-06','13212345678');
+INSERT INTO tb_employee VALUES ('2', '老于', '1', '客户经理','2019-04-27','13512345679');
+INSERT INTO tb_employee VALUES ('3', '老方', '2', '销售经理','2015-08-14','13512345670');
